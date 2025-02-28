@@ -188,10 +188,10 @@ const main = async () => {
                 await sleep(1 * 1000);
             }
 
-            logToReadme(`[${timelog()}] ✅ Cycle completed. Waiting 24 hours before next cycle...`);
+            logToReadme(`[${timelog()}] ✅ Cycle completed. Waiting 5 minutes before next cycle...`);
             await sleep(5 * 60 * 1000);  // 等待24小时
         } catch (error) {
-            logToReadme(`[${timelog()}] 🚨 Cycle error: ${error.message}. Retrying in 24 hours...`);
+            logToReadme(`[${timelog()}] 🚨 Cycle error: ${error.message}. Retrying in 5 minutes...`);
             await sleep(5 * 60 * 1000);
         }
     }
