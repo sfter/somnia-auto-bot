@@ -189,10 +189,10 @@ const main = async () => {
             }
 
             logToReadme(`[${timelog()}] ✅ Cycle completed. Waiting 24 hours before next cycle...`);
-            await sleep(24 * 60 * 60 * 1000);  // 等待24小时
+            await sleep(5 * 60 * 1000);  // 等待24小时
         } catch (error) {
             logToReadme(`[${timelog()}] 🚨 Cycle error: ${error.message}. Retrying in 24 hours...`);
-            await sleep(24 * 60 * 60 * 1000);
+            await sleep(5 * 60 * 1000);
         }
     }
 };
