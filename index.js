@@ -177,6 +177,8 @@ const main = async () => {
                 const randomIndex = Math.floor(Math.random() * reffCodes.length);
                 const reffCode = reffCodes[randomIndex];
 
+                if (!wallets[i].privateKey) continue
+
                 console.log(`[${i+1}] Processing ${new ethers.Wallet(wallets[i].privateKey).address}`);
 
                 try {
